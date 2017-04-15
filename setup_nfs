@@ -1,0 +1,8 @@
+mkdir /mnt/usbdrive
+mount /dev/sda1 /mnt/usbdrive
+apt-get install nfs-kernel-server nfs-common
+cp exports /etc/exports
+/etc/init.d/nfs-kernel-server restart
+cp issue /etc/issue
+cp issue.net /etc/issue.net
+echo '/dev/sda1 /mnt/usbdrive vfat defaults 0 0' >> /etc/fstab 

@@ -1,0 +1,13 @@
+apt-get install apache2
+apt-get install buildbot
+apt-get install buildbot-slave
+
+mkdir buildmaster
+ln -s /mnt/usbdrive/buildmaster/ buildmaster
+cd buldmaster
+buildbot create-master master
+
+mkdir /mnt/usbdrive/build_worker_1
+ln -s /mnt/usbdrive/build_worker_1/ worker_1
+buildslave create-slave slave_1 localhost:9989 slave_1 abc123
+buildslave start slave_1

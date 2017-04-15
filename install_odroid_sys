@@ -1,0 +1,7 @@
+UBUNTU=ubuntu-15.10-mate-odroid-xu3-20160114.img
+DEV=/dev/sdc
+echo !!! WARNING device $DEV is about to be formated
+echo all data will be lost on $DEV
+echo use ctl-c to abort! or click anything else to proceed
+read R
+#dd if=$UBUNTU of=/dev/sdc bs=1M conv=fsync
